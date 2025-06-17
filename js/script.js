@@ -1,4 +1,5 @@
 const randomFolks = document.querySelector(".random-peeps");
+const numUsers = document.querySelector(".num-users")
 
 const getData = async function () {
     const userRequest = await fetch("https://randomuser.me/api?results=5");
@@ -26,3 +27,6 @@ const displayUsers = function (userResults) {
         randomFolks.append(userDiv);
       });
 };
+
+numUsers.classList.remove("hide");
+
